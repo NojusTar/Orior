@@ -2,7 +2,7 @@
     {{-- main --}}
     <div class="flex flex-col items-center justify-center">
         {{-- wrapper --}}
-        <div class="bg-white w-2/3 md:w-full xl:w-4/5 p-10 border border-solid border-gray-400 mb-36">
+        <div class="bg-white w-2/3 md:w-full xl:w-4/5 p-10 md:p-0 border border-solid border-gray-400 mb-36">
             {{-- logo and about--}}
             <div class=" grid grid-cols-2 gap-5 m-3 md:flex md:flex-col">
 
@@ -56,7 +56,7 @@
                 {{-- collumn 1 --}}
                 <div class="m-1 p-2">
 
-                    <h3 class="font-bold text-2xl">
+                    <h3 class="font-bold text-2xl ">
                         Rekvizitai
                     </h3>
                     
@@ -186,7 +186,7 @@
                                     <div>
                                         {{ $currentWorkTime["day"] }}
                                     </div>
-                                    <div>
+                                    <div class="lg:text-right">
                                         {{ $currentWorkTime["time"] }}
                                     </div>
                                 </summary>
@@ -251,7 +251,7 @@
                 </div>
                 {{-- collumn 1 end --}}
                 {{-- collumn 2 --}}
-                <div class="m-1 p-2 flex flex-col justify-end">
+                <div class="m-1 p-2 flex flex-col">
 
                     <h3 class="font-bold text-2xl mt-7">Atsiliepimai</h3>
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
@@ -300,13 +300,13 @@
                 </x-header-description>
 
                 <div class="flex gap-2 mt-7 sm:flex-col sm:justify-center sm:items-center">
-                    <div class="flex items-center justify-center w-1/3 sm:w-full h-60 overflow-hidden">
-                        <img src="{{ asset("images/image.png") }}" alt="">
+                    <div class="flex items-center justify-center w-1/3 sm:w-full h-fit sm:h-fit overflow-hidden bg-red-400">
+                        <img class="" src="{{ asset("images/image.png") }}" alt="">
                     </div>
-                    <div class="flex items-center justify-center w-1/3 sm:w-full h-60 overflow-hidden">
-                        <img src="{{ asset("images/image.png") }}" alt="">
+                    <div class="flex items-center justify-center w-1/3 sm:w-full h-fit sm:h-fit overflow-hidden bg-blue-400">
+                        <img class="" src="{{ asset("images/image.png") }}" alt="">
                     </div>
-                    <div class="flex items-center justify-center w-1/3 sm:w-full h-60 overflow-hidden">
+                    <div class="flex items-center justify-center w-1/3 sm:w-full h-fit sm:h-fit overflow-hidden">
                         <img src="{{ asset("images/image.png") }}" alt="">
                     </div>
                 </div>

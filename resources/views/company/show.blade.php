@@ -56,7 +56,7 @@
                 {{-- collumn 1 --}}
                 <div class="m-1 p-2">
 
-                    <h3 class="font-bold text-2xl ">
+                    <h3 class="font-bold text-2xl sm:text-xl">
                         Rekvizitai
                     </h3>
                     
@@ -72,7 +72,7 @@
                     @endphp
                     <x-two-cols-bold displayText="Įmonės amžius" :information="$age"/>
 
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-2 sm:w-10/12">
                         <div class="font-bold">
                             Prekių ženklai
                         </div>
@@ -101,7 +101,7 @@
                 {{-- collumn 2 --}}
                 <div class="m-1 p-2">
                     
-                    <h3 class="font-bold text-2xl">
+                    <h3 class="font-bold text-2xl sm:text-xl">
                         Kontaktinė informacija
                     </h3>
                     
@@ -176,13 +176,13 @@
 
                     
 
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-2 sm:flex">
                         <div class="">
                              Darbo laikas
                         </div>
                         <div class="">
                             <details class="cursor-pointer pb-4">
-                                <summary class="grid grid-cols-2 font-bold leading-6 text-nowrap">
+                                <summary class="grid grid-cols-2 leading-6 text-nowrap sm:ps-12">
                                     <div>
                                         {{ $currentWorkTime["day"] }}
                                     </div>
@@ -191,7 +191,7 @@
                                     </div>
                                 </summary>
                                 @foreach ($sortedArray as $workTime)
-                                <div class="grid grid-cols-2 leading-5 text-nowrap">
+                                <div class="grid grid-cols-2 leading-5 text-nowrap sm:ps-12">
                                     <div>
                                         {{ $workTime["day"] }}
                                     </div>
@@ -214,13 +214,13 @@
             {{-- rekvizitai end --}}
 
             {{-- darbuotojai/atsiliepimai --}}
-            <div class="grid grid-cols-2 gap-4 sm:grid-cols-1 sm:grid-rows-2">
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-1 sm:flex sm:flex-col">
                 {{-- collumn 1 --}}
                 
                 <div class="m-1 p-2">
 
                     
-                    <h3 class="font-bold text-2xl mt-7">{{ $company->name }} informacija </h3>
+                    <h3 class="font-bold text-2xl mt-7 sm:text-xl">{{ $company->name }} informacija </h3>
 
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
@@ -231,7 +231,7 @@
                     <x-two-cols-bold displayText="Finansinė būklė" :information="$company->financialState"/>
                     
 
-                    <h3 class="font-bold text-2xl mt-7">Darbuotojai</h3>
+                    <h3 class="font-bold text-2xl mt-7 sm:text-xl">Darbuotojai</h3>
 
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
@@ -240,7 +240,7 @@
                     <x-two-cols-bold displayText="Vidutinis darbo atlyginimas" :information="$company->avgSalary" afterInfo="Eur"/>
                     <x-two-cols-bold displayText="Atlyginimas į rankas" :information="$company->salary" afterInfo="Eur"/>
 
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-2 sm:w-10/12">
                         <div class="font-bold">
                             Atlyginimo skaičiuoklė -
                         </div>
@@ -253,7 +253,7 @@
                 {{-- collumn 2 --}}
                 <div class="m-1 p-2 flex flex-col">
 
-                    <h3 class="font-bold text-2xl mt-7">Atsiliepimai</h3>
+                    <h3 class="font-bold text-2xl mt-7 sm:text-xl">Atsiliepimai</h3>
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
                     <div class="flex">
@@ -284,7 +284,7 @@
 
             {{-- footer description --}}
             <div class="m-3">
-                <x-header-description class="text-2xl mt-7" :header="$company->name" 
+                <x-header-description class="text-2xl mt-7 sm:text-xl" :header="$company->name" 
                     afterHeader="aprašymas" :description="$company->description"
                     descriptionStyle="leading-7">
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
@@ -293,7 +293,7 @@
             {{-- footer description end --}}
             {{-- footer images --}}
             <div class="m-3">
-                <x-header-description class="text-2xl mt-7" :header="$company->name" 
+                <x-header-description class="text-2xl mt-7 sm:text-xl" :header="$company->name" 
                     afterHeader="nuotraukos" :description="$company->imgDescription"
                     descriptionStyle="leading-7">
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">

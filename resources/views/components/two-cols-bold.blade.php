@@ -7,7 +7,7 @@
     "afterInfo" => ""
     ])
 
-<div class="grid grid-cols-2">
+<div class="grid grid-cols-2 sm:w-10/12 sm:justify-center sm:items-center">
     <div class="font-bold">
         {{ $preDisplay }} {{ $displayText }} {{ $afterDisplay }}
     </div>

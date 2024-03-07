@@ -27,8 +27,8 @@
         <a href="/">
             Kitos dalys
         </a>
-        <a href="/">
-            D.U.K.
+        <a href="/company/1">
+            D.U.K
         </a>
         <a href="/">
             Prisijungti
@@ -89,8 +89,8 @@ class="flex flex-col hidden items-center justify-around absolute
     <a href="/">
         Kitos dalys
     </a>
-    <a href="/">
-        D.U.K.
+    <a href="/company/1">
+        D.U.K
     </a>
     <a href="/">
         Prisijungti

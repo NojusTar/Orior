@@ -2,10 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-body
-{
-    background-color: white;
-    background-image: url("/public/images/background.png");
+#background {
+    position: absolute;
+    width: 100%;
+    height: 2020px;
+
+    background-image: linear-gradient(170deg, transparent 85%, white 85%),
+        linear-gradient(170deg, transparent 45%, #f7f7f7 45%),
+        linear-gradient(
+            170deg,
+            transparent 13%,
+            #4965fb 13%,
+            #476efb 25%,
+            #2acafc 35%,
+            #29d6fd 38%,
+            #31d9f9 45%
+        ),
+        linear-gradient(140deg, transparent 17%, #4965fb 17%, #325cf4 19%),
+        linear-gradient(100deg, transparent 20%, #4965fb 20%, #325cf4 22%),
+        linear-gradient(90deg, #0f33f4 7%, #315cf4 15%);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+}
+
+#getStarted {
+    background: linear-gradient(
+        90deg,
+        rgba(37, 99, 234, 1) 0%,
+        rgba(122, 122, 236, 1) 8%,
+        rgba(37, 99, 234, 1) 22%,
+        rgba(122, 122, 236, 1) 33%,
+        rgba(37, 99, 234, 1) 46%,
+        rgba(66, 181, 248, 1) 64%,
+        rgba(37, 99, 234, 1) 98%
+    );
 }

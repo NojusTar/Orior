@@ -9,11 +9,12 @@
     <title>Orior</title>
 </head>
 <body class=" leading-7 text-sm">
-    @include("partials._navigation")
-    <img src="" alt="">
-    {{-- view output --}}
-    {{ $slot }}
+    <div id="background">
+    
+        @include("partials._navigation")
+        {{-- view output --}}
+        {{ $slot }}
 
-
+    </div>
 </body>
 </html>

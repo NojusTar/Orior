@@ -23,7 +23,6 @@
         </div>
 
     </div>
-    {{-- search & left numbers end --}}
 
     <div class="p-20">
         <x-number-text-col number="372+" text="TIEKĖJAI" />
@@ -31,66 +30,212 @@
         <x-number-text-col number="541+" text="BALDINĖS PLOKŠTĖS" />
         <x-number-text-col number="1054+" text="PREKĖS, GAMINIAI" />
     </div>
+    {{-- search & left numbers end --}} 
 
-    {{-- why use text --}}
-    <div class="flex flex-col items-center justify-center mt-40 mb-60">
-        <h2 class="text-3xl font-bold mb-7">
-            Kodėl KITI naudojasi Perfect parts?
-        </h2>
-        <p class="text-base">
-            Perfect parts yra geriausia ir patogiausia platforma
-        </p>
-        <p class="text-base">
-            reikiamų dalių ar detalių paieškai ir kontaktų apsikeitimui su panašios srities verslais.
-        </p>
-        <p class="text-base mt-10 leading-5">
-            Paprasta surasti visas reikiamas dalis savo verslui vystyti <br>
-            Vykdant bet kokią gamybinę veiklą dažnai atsitinka, kad nereikia visos baldinės plokštės, o tik jos dalies. <br>
-            Sutaupykite pirkdami nepanaudotas kokybiškas dalis iš kitų verslų ar savo kolegos. <br>
-            Talpinkite šioje svetainėje savo likučius, Publikuokite. <br>
-            Lengvai suraskite kolegą, kuris turi reikiamas dalis. <br>
-            Rezervuokite sau ir vystykite verslą efektyviau ir sėkmingiau.
-        </p>
-        <p class="text-base mt-16">
-            NAUJI PRITAIKYTI SPRENDIMAI VERSLAMS
-        </p>
-        <p class="text-base mt-5">
-            PUIKI GALIMYBĖ SUKURTI PRITAIKYTI
-        </p>
-
-    </div>
-    {{-- why use text end --}}
-    {{-- how it works --}}
-    <div class="flex flex-col items-center justify-center">
-        <h2 class="text-3xl font-bold mb-60">
-            Kaip veikia Perfect parts?
-        </h2>
-        <a class="text-center text-blue-500" href="#">
-            IEŠKOK, TALPINK, KEISKIS, DALINKISM, PARDUOK <br>
-            NEMOKAMAI
-        </a>
-        <h2 class="text-3xl font-bold mb-10 mt-10">
-            Populiariausios prekių kategorijos
-        </h2>
-        <div class=" grid grid-rows-3 grid-cols-5">
-            @for ($i = 0; $i < 15; $i++)
-            <div>
-                <x-item-card  />
+    {{-- popular categories --}}
+    <div class="flex justify-center">
+        <div class="bg-white px-40 pb-20">
+            <div class="flex flex-col items-center justify-center">
+                <h2 class="text-3xl font-bold mb-10 mt-10">
+                    Populiariausios kategorijos
+                </h2>
+                <div class=" grid grid-rows-1 grid-cols-5">
+                    @for ($i = 0; $i < 5; $i++)
+                    <div>
+                        <x-item-card />
+                    </div>
+                    @endfor
+                </div>
             </div>
-            @endfor
         </div>
     </div>
-    {{-- how it works end --}}
+    
+    {{-- popular categories end --}}
+    
+    {{-- making or selling --}}
+    <div class="flex flex-col items-center gap-3 mt-20">
+        <h2 class="text-center text-3xl font-bold mb-14">
+            Gamini ir / ar parduodi komponentus ar gaminius?
+        </h2>
+        <div class="flex gap-4 justify-center items-end">
+            <div class="w-80">
+                <img src="{{ asset("images/PerfectParts/perfect-parts-logo.svg") }}" alt="">
+                
+            </div>
+        </div>
+        <div>
+            <p class="text-[1.75rem] font-light">Padeda atrasti daug daugiau</p>
+        </div>
+    </div>
+    {{-- making or selling end --}}
+
+    {{-- how does it work --}}
+    <div class="flex flex-col items-center gap-3 mt-20">
+        <h2 class="text-center text-3xl font-bold mb-10">
+            Kaip veikia Perfect parts?
+        </h2>
+
+        <div class="flex">
+            {{-- 1 --}}
+            <div>
+                <div class="flex flex-col items-center gap-3 p-5 border border-black w-40 h-80">
+                     <img class="w-14" src="{{ asset("images/PerfectParts/building.svg") }}" alt="">
+                     <img class="w-14" src="{{ asset("images/PerfectParts/building.svg") }}" alt="">
+                     <img class="w-14" src="{{ asset("images/PerfectParts/building.svg") }}" alt="">
+                     <div class="w-full leading-none mt-3">EVERY</div>
+                     <div class="w-full leading-none">BUSINESS</div>
+                     <div class="w-full leading-none">CREATING GOODS</div>
+                 </div>
+
+                 <div class="w-full text-nowrap flex items-center justify-center">
+                    <h2 class="w-1 flex items-center justify-center text-center
+                     text-[#003888] text-3xl font-bold mt-4">
+                        TO SELL MORE
+                    </h2>
+                </div>
+            </div>
+            {{-- 1 end--}}
+
+             <div class="flex flex-col items-center justify-center px-10 pb-20">
+                <div class="flex gap-5 ">
+                    <img class="w-14" src="{{ asset("images/PerfectParts/export.svg") }}" alt="">
+                    <img class="w-14" src="{{ asset("images/PerfectParts/right-arrow.svg") }}" alt="">
+                </div>
+
+                <div>
+                    EXPORT / ADD DATA
+                </div>
+             </div>
+             <div class="w-[20.25rem] h-[20.25rem] -mx-32 -ms-44 flex items-center justify-center"> 
+                 <img class="w-9/12 -rotate-90" src="{{ asset("images/PerfectParts/perfect-parts-logo.svg") }}" alt="">
+             </div>
+             {{-- 2 --}}
+             <div>
+                 <div class="flex flex-col items-center gap-3 p-5 border border-black w-40 h-80">
+                    <img class="w-2/3" src="{{ asset("images/PerfectParts/logo.svg") }}" alt="">
+                    <img class="w-2/3" src="{{ asset("images/PerfectParts/data-flow-cross.svg") }}" alt="">
+                    <div class="w-full leading-6 font-bold text-[#009eff] text-center">
+                        HELPS <br> PROCESS
+                    </div>
+                    <div class="flex justify-around w-full">
+                        <img class="w-5" src="{{ asset("images/PerfectParts/building.svg") }}" alt="">
+                        <img class="w-5" src="{{ asset("images/PerfectParts/building.svg") }}" alt="">
+                    </div>
+                </div>
+
+                <div class="w-full text-nowrap flex items-center justify-center">
+                    <h2 class="w-1 flex items-center justify-center text-center
+                     text-[#003888] text-3xl font-bold mt-4">
+                        SETUP & <br>
+                        PREPARE DATA
+                    </h2>
+                </div>
+             </div>
+             {{-- 2 end--}}
+
+            <div class="flex flex-col items-center justify-center px-10 pb-20">
+                <div class="flex gap-5">
+                    <img class="w-14" src="{{ asset("images/PerfectParts/share.svg") }}" alt="">
+                    <img class="w-14" src="{{ asset("images/PerfectParts/right-arrow.svg") }}" alt="">
+                </div>
+
+                <div>
+                    EASILY SHARE
+                </div>
+             </div>
+             {{-- 3 --}}
+             <div>
+                <div class="flex flex-col items-center justify-center gap-3 p-5 border border-black w-40 h-80">
+                    <div class="flex">
+                        <img class="w-14 h-14" src="{{ asset("images/PerfectParts/store.svg") }}" alt="">
+                        <img class="w-9 absolute translate-x-8 translate-y-7"
+                         src="{{ asset("images/PerfectParts/shop-color.svg") }}" alt="">
+                    </div>
+                    
+                    <div class="flex">
+                        <img class="w-14 h-14" src="{{ asset("images/PerfectParts/store.svg") }}" alt="">
+                        <img class="w-9 absolute -translate-x-4 translate-y-7"
+                         src="{{ asset("images/PerfectParts/shop-color.svg") }}" alt="">
+                    </div>
+
+                    <div class="flex">
+                        <img class="w-14 h-14" src="{{ asset("images/PerfectParts/store.svg") }}" alt="">
+                        <img class="w-9 absolute translate-x-8 translate-y-7"
+                         src="{{ asset("images/PerfectParts/shop-color.svg") }}" alt="">
+                    </div>
+                </div>
+                <div class="w-full text-nowrap flex items-center justify-center">
+                    <h2 class="w-1 flex items-center justify-center text-center
+                     text-[#003888] text-3xl font-bold mt-4">
+                        & EASILY SHARE <br>
+                        WITH OTHERS
+                    </h2>
+                </div>
+                {{-- 3 end--}}
+             </div>
+             
+            
+        </div>
+        
+    </div>
+    {{-- how does it work end --}}
+
+    {{-- uses for you buisness --}}
+    <div class="flex flex-col items-center gap-3 mt-20">
+        <h2 class="text-center text-3xl font-bold mb-14">
+            Perfect parts nauda tavo verslui
+        </h2>
+        <div class="grid gap-x-5 grid-cols-4 grid-rows-2">
+            <x-uses-comp title="Kurk/Importuok" description="naujus produktus" 
+            :image="asset('images/PerfectParts/add_new_product.svg')" />
+
+            <x-uses-comp title="Redaguok" description="esamus produktus" 
+            :image="asset('images/PerfectParts/edit-2.svg')" />
+
+            <x-uses-comp title="Publikuok" description="esamus produktus" 
+            :image="asset('images/PerfectParts/paper-plane.svg')"  />
+
+            <x-uses-comp title="Dalinkis" description="savo produktais" 
+            :image="asset('images/PerfectParts/share.svg')"  />
+
+            <x-uses-comp title="Eksportuok" description="naujus produktus" 
+            :image="asset('images/PerfectParts/download.svg')"  />
+
+            <x-uses-comp title="Ieškok" description="naujus produktus" 
+            :image="asset('images/PerfectParts/search.svg')"  />
+
+            <x-uses-comp title="Atrask partnerius" description="naujus produktus" 
+            :image="asset('images/PerfectParts/add-user.svg')"  />
+
+            <x-uses-comp title="Parduok daugiau" description="naujus produktus" 
+            :image="asset('images/PerfectParts/add_new_product.svg')"  />
+        </div>
+    </div>
+    {{-- uses for you buisness end --}}
+
+    {{-- work more efective --}}
+    <div class="flex flex-col items-center gap-3 mt-20">
+        <h2 class="text-center text-3xl font-bold">
+            Norisi darbuotis efektyviau?
+        </h2>
+        <p class="text-lg">
+            PerfectParts visada pasiruošę padėti!
+        </p>
+        <a class="bg-[#009eff] text-white px-24 py-3 mt-4" href="#">
+            Pradėk savo kelionę jau dabar
+        </a>
+    </div>
+    {{-- work more efective end --}}
 
     {{-- partners --}}
-    <h2 class="mt-60 text-3xl font-bold text-center">
+    <h2 class="mt-20 text-3xl font-bold text-center">
         Mūsų sprendimais pasitiki ir naudoja 
     </h2>
 
     <div class="flex justify-center pt-10 pb-20">
         <div class="w-8/12">
-            <div class="grid grid-cols-6 grid-rows-3">
-                @for ($i = 0; $i < 18; $i++)
+            <div class="grid grid-cols-6 grid-rows-2">
+                @for ($i = 0; $i < 12; $i++)
                 <div class="">
                     <img src="{{ asset("images/company.png") }}" alt="">
                 </div>
@@ -98,12 +243,11 @@
             </div>
         </div>
     </div>
-    
     {{-- partners end --}}
 
     {{-- get started --}}
 
-    <div class="bg-blue-400 text-center py-40">
+    <div id="getStarted" class="bg-blue-400 text-center py-40">
         <h2 class="text-white text-4xl font-semibold mb-7">
             Get started today
         </h2>
@@ -118,19 +262,19 @@
 
     {{-- get started end --}}
 
-    {{-- devider --}}
-    <div class="h-32"></div>
-    {{-- devider end --}}
-
-    {{-- FAQ --}}
+    {{-- subscriptions  --}}
 
     <div class="bg-gray-200 py-40 flex flex-col items-center">
         <h2 class="text-3xl font-bold mb-20">
-            Dažnai užduodami klausimai (D.U.K.)
+            Planai, funkcijos ir kainos
         </h2>
         <div class="flex gap-5">
             <x-sub-card>
 
+                <x-sub-card-attribute attribute="Commision-free trading"/>
+                <hr>
+                <x-sub-card-attribute attribute="Multi-layered encryption"/>
+                <hr>
                 <x-sub-card-attribute attribute="Commision-free trading"/>
                 <hr>
                 <x-sub-card-attribute attribute="Multi-layered encryption"/>
@@ -149,12 +293,14 @@
                 <hr>
                 <x-sub-card-attribute attribute="One tip every day"/>
                 <hr>
-                <x-sub-card-attribute attribute="Invest up to $1,500 each month"/>
+                <x-sub-card-attribute attribute="Invest up to $15,000 each month"/>
                 <hr>
                 <x-sub-card-attribute attribute="Basic transaction anonymization"/>
+                <hr>
+                <x-sub-card-attribute attribute="Invest up to $1,500 each month"/>
 
             </x-sub-card>
-            <x-sub-card mode="dark" plan="Investor" price="7" buttonMessage="Subscribe"
+            <x-sub-card mode="dark" plan="VIP" price="199" buttonMessage="Subscribe"
             description="You've been investing for a while. Invest more and grow your wealth faster.">
 
                 <x-sub-card-attribute mode="dark" attribute="Commision-free trading"/>
@@ -171,9 +317,22 @@
 
             </x-sub-card>
         </div>
+
+        <div>
+            <div class="text-3xl font-bold mt-10">
+                Reikia daugiau funkcijų?
+            </div>
+            <div class="text-center leading-none">
+                Perfect parts - visada pasiruošę padėti!
+            </div>
+        </div>
+        <a class="bg-[#009eff] text-white px-5 py-4 mt-1" href="#">
+            Susisiek su PerfectParts komanda dabar
+        </a>
+
     </div>
 
-    {{-- FAQ end --}}
+    {{-- subscriptions end --}}
 
     {{-- foldable FAQ --}}
 

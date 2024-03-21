@@ -30,6 +30,7 @@ Route::delete('/companies/{company}', [CompanyController::class, "destroy"]);
 Route::get("/company/{company}", [CompanyController::class, "show"]);
 
 
+
 Route::get("/register", [UserController::class, "create"]);
 
 Route::post("/users", [UserController::class, "store"]);

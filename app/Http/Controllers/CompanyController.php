@@ -104,4 +104,6 @@ class CompanyController extends Controller
 
         return back();
     }
+
 }
+

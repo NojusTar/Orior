@@ -25,10 +25,10 @@
     </div>
 
     <div class="p-20">
-        <x-number-text-col number="372+" text="TIEKĖJAI" />
-        <x-number-text-col number="47+" text="GAMINTOJAI" />
-        <x-number-text-col number="541+" text="BALDINĖS PLOKŠTĖS" />
-        <x-number-text-col number="1054+" text="PREKĖS, GAMINIAI" />
+        <x-home.number-text-col number="372+" text="TIEKĖJAI" />
+        <x-home.number-text-col number="47+" text="GAMINTOJAI" />
+        <x-home.number-text-col number="541+" text="BALDINĖS PLOKŠTĖS" />
+        <x-home.number-text-col number="1054+" text="PREKĖS, GAMINIAI" />
     </div>
     {{-- search & left numbers end --}} 
 
@@ -42,7 +42,7 @@
                 <div class=" grid grid-rows-1 grid-cols-5">
                     @for ($i = 0; $i < 5; $i++)
                     <div>
-                        <x-item-card />
+                        <x-home.item-card />
                     </div>
                     @endfor
                 </div>
@@ -186,28 +186,28 @@
             Perfect parts nauda tavo verslui
         </h2>
         <div class="grid gap-x-5 grid-cols-4 grid-rows-2">
-            <x-uses-comp title="Kurk/Importuok" description="naujus produktus" 
+            <x-home.uses-comp title="Kurk/Importuok" description="naujus produktus" 
             :image="asset('images/PerfectParts/add_new_product.svg')" />
 
-            <x-uses-comp title="Redaguok" description="esamus produktus" 
+            <x-home.uses-comp title="Redaguok" description="esamus produktus" 
             :image="asset('images/PerfectParts/edit-2.svg')" />
 
-            <x-uses-comp title="Publikuok" description="esamus produktus" 
+            <x-home.uses-comp title="Publikuok" description="esamus produktus" 
             :image="asset('images/PerfectParts/paper-plane.svg')"  />
 
-            <x-uses-comp title="Dalinkis" description="savo produktais" 
+            <x-home.uses-comp title="Dalinkis" description="savo produktais" 
             :image="asset('images/PerfectParts/share.svg')"  />
 
-            <x-uses-comp title="Eksportuok" description="naujus produktus" 
+            <x-home.uses-comp title="Eksportuok" description="naujus produktus" 
             :image="asset('images/PerfectParts/download.svg')"  />
 
-            <x-uses-comp title="Ieškok" description="naujus produktus" 
+            <x-home.uses-comp title="Ieškok" description="naujus produktus" 
             :image="asset('images/PerfectParts/search.svg')"  />
 
-            <x-uses-comp title="Atrask partnerius" description="naujus produktus" 
+            <x-home.uses-comp title="Atrask partnerius" description="naujus produktus" 
             :image="asset('images/PerfectParts/add-user.svg')"  />
 
-            <x-uses-comp title="Parduok daugiau" description="naujus produktus" 
+            <x-home.uses-comp title="Parduok daugiau" description="naujus produktus" 
             :image="asset('images/PerfectParts/add_new_product.svg')"  />
         </div>
     </div>
@@ -269,53 +269,53 @@
             Planai, funkcijos ir kainos
         </h2>
         <div class="flex gap-5">
-            <x-sub-card>
+            <x-home.sub-card>
 
-                <x-sub-card-attribute attribute="Commision-free trading"/>
+                <x-home.sub-card-attribute attribute="Commision-free trading"/>
                 <hr>
-                <x-sub-card-attribute attribute="Multi-layered encryption"/>
+                <x-home.sub-card-attribute attribute="Multi-layered encryption"/>
                 <hr>
-                <x-sub-card-attribute attribute="Commision-free trading"/>
+                <x-home.sub-card-attribute attribute="Commision-free trading"/>
                 <hr>
-                <x-sub-card-attribute attribute="Multi-layered encryption"/>
+                <x-home.sub-card-attribute attribute="Multi-layered encryption"/>
                 <hr>
-                <x-sub-card-attribute attribute="One tip every day"/>
+                <x-home.sub-card-attribute attribute="One tip every day"/>
                 <hr>
-                <x-sub-card-attribute attribute="Invest up to $1,500 each month"/>
+                <x-home.sub-card-attribute attribute="Invest up to $1,500 each month"/>
 
-            </x-sub-card>
-            <x-sub-card plan="Investor" price="7" buttonMessage="Subscribe"
+            </x-home.sub-card>
+            <x-home.sub-card plan="Investor" price="7" buttonMessage="Subscribe"
             description="You've been investing for a while. Invest more and grow your wealth faster.">
 
-                <x-sub-card-attribute attribute="Commision-free trading"/>
+                <x-home.sub-card-attribute attribute="Commision-free trading"/>
                 <hr>
-                <x-sub-card-attribute attribute="Multi-layered encryption"/>
+                <x-home.sub-card-attribute attribute="Multi-layered encryption"/>
                 <hr>
-                <x-sub-card-attribute attribute="One tip every day"/>
+                <x-home.sub-card-attribute attribute="One tip every day"/>
                 <hr>
-                <x-sub-card-attribute attribute="Invest up to $15,000 each month"/>
+                <x-home.sub-card-attribute attribute="Invest up to $15,000 each month"/>
                 <hr>
-                <x-sub-card-attribute attribute="Basic transaction anonymization"/>
+                <x-home.sub-card-attribute attribute="Basic transaction anonymization"/>
                 <hr>
-                <x-sub-card-attribute attribute="Invest up to $1,500 each month"/>
+                <x-home.sub-card-attribute attribute="Invest up to $1,500 each month"/>
 
-            </x-sub-card>
-            <x-sub-card mode="dark" plan="VIP" price="199" buttonMessage="Subscribe"
+            </x-home.sub-card>
+            <x-home.sub-card mode="dark" plan="VIP" price="199" buttonMessage="Subscribe"
             description="You've been investing for a while. Invest more and grow your wealth faster.">
 
-                <x-sub-card-attribute mode="dark" attribute="Commision-free trading"/>
+                <x-home.sub-card-attribute mode="dark" attribute="Commision-free trading"/>
                 <hr class="border-0 h-[1px] bg-gray-800">
-                <x-sub-card-attribute mode="dark" attribute="Multi-layered encryption"/>
+                <x-home.sub-card-attribute mode="dark" attribute="Multi-layered encryption"/>
                 <hr class="border-0 h-[1px] bg-gray-800">
-                <x-sub-card-attribute mode="dark" attribute="Real-tine tip notification"/>
+                <x-home.sub-card-attribute mode="dark" attribute="Real-tine tip notification"/>
                 <hr class="border-0 h-[1px] bg-gray-800">
-                <x-sub-card-attribute mode="dark" attribute="No investment limits"/>
+                <x-home.sub-card-attribute mode="dark" attribute="No investment limits"/>
                 <hr class="border-0 h-[1px] bg-gray-800">
-                <x-sub-card-attribute mode="dark" attribute="Advanced transaction anonymization"/>
+                <x-home.sub-card-attribute mode="dark" attribute="Advanced transaction anonymization"/>
                 <hr class="border-0 h-[1px] bg-gray-800">
-                <x-sub-card-attribute mode="dark" attribute="Automated tax-loss harvesting"/>
+                <x-home.sub-card-attribute mode="dark" attribute="Automated tax-loss harvesting"/>
 
-            </x-sub-card>
+            </x-home.sub-card>
         </div>
 
         <div>
@@ -356,21 +356,21 @@
                     <div class="text-gray-400 font-semibold">
                         General
                     </div>
-                    <x-details header='What does "lifetime access" mean exactly?'/>
+                    <x-home.details header='What does "lifetime access" mean exactly?'/>
                     <hr class="border-0 h-[1px] bg-gray-200">
-                    <x-details header='What does "free updates" include?'/>
+                    <x-home.details header='What does "free updates" include?'/>
                 </div>
                 <div>
                     <div class="text-gray-400 font-semibold">
                         Compatibility
                     </div>
-                    <x-details header='Are Figma, Sketch, or Adobe XD files included?'/>
+                    <x-home.details header='Are Figma, Sketch, or Adobe XD files included?'/>
                     <hr class="border-0 h-[1px] bg-gray-200">
-                    <x-details header='What JS framework is used?'/>
+                    <x-home.details header='What JS framework is used?'/>
                     <hr class="border-0 h-[1px] bg-gray-200">
-                    <x-details header='What version of Tailwind CSS is used?'/>
+                    <x-home.details header='What version of Tailwind CSS is used?'/>
                     <hr class="border-0 h-[1px] bg-gray-200">
-                    <x-details header='What browsers are supported?'/>
+                    <x-home.details header='What browsers are supported?'/>
                 </div>
             </div>
         </div>

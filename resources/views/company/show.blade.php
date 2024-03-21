@@ -62,15 +62,15 @@
                     
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                    <x-two-cols-bold displayText="Įmonės kodas" :information="$company->companyCode"/>
-                    <x-two-cols-bold displayText="PVM kodas" :information="$company->pvm"/>
-                    <x-two-cols-bold displayText="Vadovas" :information="$company->director"/>
+                    <x-company.two-cols-bold displayText="Įmonės kodas" :information="$company->companyCode"/>
+                    <x-company.two-cols-bold displayText="PVM kodas" :information="$company->pvm"/>
+                    <x-company.two-cols-bold displayText="Vadovas" :information="$company->director"/>
                     @php
                         $currentAge = date("Y");
                         $companyAge = date('Y', strtotime($company->age));
                         $age = $currentAge - $companyAge;
                     @endphp
-                    <x-two-cols-bold displayText="Įmonės amžius" :information="$age"/>
+                    <x-company.two-cols-bold displayText="Įmonės amžius" :information="$age"/>
 
                     <div class="grid grid-cols-2 sm:w-10/12">
                         <div class="font-bold">
@@ -83,14 +83,14 @@
 
                     <div class="font-bold">Įmonės registracijos Adresas:</div>
 
-                    <x-two-cols displayText="Gatvė" :information="$company->location"/>
-                    <x-two-cols displayText="Pašto kodas" :information="$company->postalCode"/>
-                    <x-two-cols displayText="Valstybė" :information="$company->state"/>
+                    <x-company.two-cols displayText="Gatvė" :information="$company->location"/>
+                    <x-company.two-cols displayText="Pašto kodas" :information="$company->postalCode"/>
+                    <x-company.two-cols displayText="Valstybė" :information="$company->state"/>
 
-                    <x-header-description class="pt-3" header="Veiklos sritys" :description="$company->activities"
+                    <x-company.header-description class="pt-3" header="Veiklos sritys" :description="$company->activities"
                         descriptionStyle="pb-3"/>
 
-                    <x-header-description header="Paslaugos" :description="$company->services"/>
+                    <x-company.header-description header="Paslaugos" :description="$company->services"/>
 
                     
                     
@@ -107,14 +107,14 @@
                     
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                    <x-two-cols-bold displayText="Telefonas" :information="$company->phone"/>
-                    <x-two-cols-bold displayText="Svetainė" :information="$company->website"/>
-                    <x-two-cols-bold displayText="Susisiekti" :information="$company->contactWeb"/>
-                    <x-two-cols-bold displayText="El. pašto adresas" :information="$company->email"/>
+                    <x-company.two-cols-bold displayText="Telefonas" :information="$company->phone"/>
+                    <x-company.two-cols-bold displayText="Svetainė" :information="$company->website"/>
+                    <x-company.two-cols-bold displayText="Susisiekti" :information="$company->contactWeb"/>
+                    <x-company.two-cols-bold displayText="El. pašto adresas" :information="$company->email"/>
 
                     <h4 class="font-bold">Parduotuvės adresas:</h4>
 
-                    <x-two-cols displayText="Gatvė" :information="$company->location" :afterInfo="$company->state"/>
+                    <x-company.two-cols displayText="Gatvė" :information="$company->location" :afterInfo="$company->state"/>
 
                     @php
                         $workTimeArr = [
@@ -205,7 +205,7 @@
                         </div>                       
                     </div>
 
-                    <x-two-cols displayText="Pietų pertrauka" information="12 AM-1 PM"/>
+                    <x-company.two-cols displayText="Pietų pertrauka" information="12 AM-1 PM"/>
 
                 </div>
                 {{-- collumn 2 end --}}
@@ -224,21 +224,21 @@
 
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                    <x-two-cols-bold displayText="pajamos 2023m." :information="$company->incomeLatest" afterInfo="Eur"/>
-                    <x-two-cols-bold displayText="Pelnas" :information="$company->profit" afterInfo="Eur"/>
-                    <x-two-cols-bold displayText="Automobiliai" :information="$company->cars"/>
-                    <x-two-cols-bold displayText="Skolos sodrai" :information="$company->deptsSodra"/>
-                    <x-two-cols-bold displayText="Finansinė būklė" :information="$company->financialState"/>
+                    <x-company.two-cols-bold displayText="pajamos 2023m." :information="$company->incomeLatest" afterInfo="Eur"/>
+                    <x-company.two-cols-bold displayText="Pelnas" :information="$company->profit" afterInfo="Eur"/>
+                    <x-company.two-cols-bold displayText="Automobiliai" :information="$company->cars"/>
+                    <x-company.two-cols-bold displayText="Skolos sodrai" :information="$company->deptsSodra"/>
+                    <x-company.two-cols-bold displayText="Finansinė būklė" :information="$company->financialState"/>
                     
 
                     <h3 class="font-bold text-2xl mt-7 sm:text-xl">Darbuotojai</h3>
 
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                    <x-two-cols-bold displayText="Darbuotojai" :information="$company->workers" afterInfo="darbuotojai"/>
-                    <x-two-cols-bold displayText="Darbo skelbimai" :information="$company->jobAds" afterInfo="darbo skelbimai"/>
-                    <x-two-cols-bold displayText="Vidutinis darbo atlyginimas" :information="$company->avgSalary" afterInfo="Eur"/>
-                    <x-two-cols-bold displayText="Atlyginimas į rankas" :information="$company->salary" afterInfo="Eur"/>
+                    <x-company.two-cols-bold displayText="Darbuotojai" :information="$company->workers" afterInfo="darbuotojai"/>
+                    <x-company.two-cols-bold displayText="Darbo skelbimai" :information="$company->jobAds" afterInfo="darbo skelbimai"/>
+                    <x-company.two-cols-bold displayText="Vidutinis darbo atlyginimas" :information="$company->avgSalary" afterInfo="Eur"/>
+                    <x-company.two-cols-bold displayText="Atlyginimas į rankas" :information="$company->salary" afterInfo="Eur"/>
 
                     <div class="grid grid-cols-2 sm:w-10/12">
                         <div class="font-bold">
@@ -284,20 +284,20 @@
 
             {{-- footer description --}}
             <div class="m-3">
-                <x-header-description class="text-2xl mt-7 sm:text-xl" :header="$company->name" 
+                <x-company.header-description class="text-2xl mt-7 sm:text-xl" :header="$company->name" 
                     afterHeader="aprašymas" :description="$company->description"
                     descriptionStyle="leading-7">
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
-                </x-header-description>
+                </x-company.header-description>
             </div>
             {{-- footer description end --}}
             {{-- footer images --}}
             <div class="m-3">
-                <x-header-description class="text-2xl mt-7 sm:text-xl" :header="$company->name" 
+                <x-company.header-description class="text-2xl mt-7 sm:text-xl" :header="$company->name" 
                     afterHeader="nuotraukos" :description="$company->imgDescription"
                     descriptionStyle="leading-7">
                     <hr class="mb-4 w-6/12 h-1 bg-gray-400">
-                </x-header-description>
+                </x-company.header-description>
 
                 <div class="flex gap-2 mt-7 sm:flex-col sm:justify-center sm:items-center">
                     <div class="flex items-center justify-center w-1/3 sm:w-full h-fit sm:h-fit overflow-hidden bg-red-400">

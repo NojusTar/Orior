@@ -72,46 +72,46 @@
                         
                         <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                        <x-two-cols-bold-edit displayText="Įmonės kodas" name="companyCode" value="{{ $company->companyCode }}"/>
+                        <x-edit.two-cols-bold-edit displayText="Įmonės kodas" name="companyCode" value="{{ $company->companyCode }}"/>
                             @error("companyCode")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="PVM kodas" name="pvm" value="{{ $company->pvm }}"/>
+                        <x-edit.two-cols-bold-edit displayText="PVM kodas" name="pvm" value="{{ $company->pvm }}"/>
                             @error("pvm")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="Vadovas" name="director" value="{{ $company->director }}"/>
+                        <x-edit.two-cols-bold-edit displayText="Vadovas" name="director" value="{{ $company->director }}"/>
                             @error("director")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="Įmonės amžius" name="age" value="{{ $company->age }}" type="date"/>
+                        <x-edit.two-cols-bold-edit displayText="Įmonės amžius" name="age" value="{{ $company->age }}" type="date"/>
                             @error("age")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
                         <div class="font-bold">Įmonės registracijos Adresas:</div>
 
-                        <x-two-cols-edit displayText="Gatvė" name="location" value="{{ $company->location }}"/>
+                        <x-edit.two-cols-edit displayText="Gatvė" name="location" value="{{ $company->location }}"/>
                             @error("location")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
-                        <x-two-cols-edit displayText="Pašto kodas" name="postalCode" value="{{ $company->postalCode }}"/>
+                        <x-edit.two-cols-edit displayText="Pašto kodas" name="postalCode" value="{{ $company->postalCode }}"/>
                             @error("postalCode")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
-                        <x-two-cols-edit displayText="Valstybė" name="state" value="{{ $company->state }}"/>
+                        <x-edit.two-cols-edit displayText="Valstybė" name="state" value="{{ $company->state }}"/>
                             @error("state")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-header-description-edit name="activities" header="Veiklos sritys" :description="$company->activities"/>
+                        <x-edit.header-description-edit name="activities" header="Veiklos sritys" :description="$company->activities"/>
                             @error("activities")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
-                        <x-header-description-edit name="services" header="Paslaugos" :description="$company->services"/>
+                        <x-edit.header-description-edit name="services" header="Paslaugos" :description="$company->services"/>
                             @error("services")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
@@ -129,26 +129,26 @@
                         
                         <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                        <x-two-cols-bold-edit displayText="Telefonas" name="phone" value="{{ $company->phone }}"/>
+                        <x-edit.two-cols-bold-edit displayText="Telefonas" name="phone" value="{{ $company->phone }}"/>
                             @error("phone")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
-                        <x-two-cols-bold-edit displayText="Svetainė" name="website" value="{{ $company->website }}"/>
+                        <x-edit.two-cols-bold-edit displayText="Svetainė" name="website" value="{{ $company->website }}"/>
                             @error("website")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
-                        <x-two-cols-bold-edit displayText="Susisiekti" name="contactWeb" value="{{ $company->contactWeb }}"/>
+                        <x-edit.two-cols-bold-edit displayText="Susisiekti" name="contactWeb" value="{{ $company->contactWeb }}"/>
                             @error("contactWeb")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
-                        <x-two-cols-bold-edit displayText="El. pašto adresas" name="email" value="{{ $company->email }}"/>
+                        <x-edit.two-cols-bold-edit displayText="El. pašto adresas" name="email" value="{{ $company->email }}"/>
                             @error("email")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
                         <h4 class="font-bold">Parduotuvės adresas:</h4>
 
-                        <x-two-cols-edit displayText="Gatvė" value="{{ $company->location }}" name="location"/>
+                        <x-edit.two-cols-edit displayText="Gatvė" value="{{ $company->location }}" name="location"/>
                             @error("location")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
@@ -242,7 +242,7 @@
                             </div>                       
                         </div>
 
-                        <x-two-cols displayText="Pietų pertrauka" information="12 AM-1 PM"/>
+                        <x-company.two-cols displayText="Pietų pertrauka" information="12 AM-1 PM"/>
 
                     </div>
                     {{-- collumn 2 end --}}
@@ -261,27 +261,27 @@
 
                         <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                        <x-two-cols-bold-edit displayText="pajamos 2023m." value="{{ $company->incomeLatest }}" name="incomeLatest"/>
+                        <x-edit.two-cols-bold-edit displayText="pajamos 2023m." value="{{ $company->incomeLatest }}" name="incomeLatest"/>
                             @error("incomeLatest")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
                             
-                        <x-two-cols-bold-edit displayText="Pelnas" value="{{ $company->profit }}" name="profit"/>
+                        <x-edit.two-cols-bold-edit displayText="Pelnas" value="{{ $company->profit }}" name="profit"/>
                             @error("profit")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="Automobiliai" value="{{ $company->cars }}" name="cars"/>
+                        <x-edit.two-cols-bold-edit displayText="Automobiliai" value="{{ $company->cars }}" name="cars"/>
                             @error("cars")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="Skolos sodrai" value="{{ $company->deptsSodra }}" name="deptsSodra"/>
+                        <x-edit.two-cols-bold-edit displayText="Skolos sodrai" value="{{ $company->deptsSodra }}" name="deptsSodra"/>
                             @error("deptsSodra")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="Finansinė būklė" value="{{ $company->financialState }}" name="financialState"/>
+                        <x-edit.two-cols-bold-edit displayText="Finansinė būklė" value="{{ $company->financialState }}" name="financialState"/>
                             @error("financialState")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
@@ -291,22 +291,22 @@
 
                         <hr class="mb-4 w-6/12 h-1 bg-gray-400">
 
-                        <x-two-cols-bold-edit displayText="Darbuotojai" value="{{ $company->workers }}" name="workers"/>
+                        <x-edit.two-cols-bold-edit displayText="Darbuotojai" value="{{ $company->workers }}" name="workers"/>
                             @error("workers")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="Darbo skelbimai" value="{{ $company->jobAds }}" name="jobAds"/>
+                        <x-edit.two-cols-bold-edit displayText="Darbo skelbimai" value="{{ $company->jobAds }}" name="jobAds"/>
                             @error("jobAds")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
 
-                        <x-two-cols-bold-edit displayText="Vidutinis darbo atlyginimas" value="{{ $company->avgSalary }}" name="avgSalary"/>
+                        <x-edit.two-cols-bold-edit displayText="Vidutinis darbo atlyginimas" value="{{ $company->avgSalary }}" name="avgSalary"/>
                             @error("avgSalary")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror
                             
-                        <x-two-cols-bold-edit displayText="Atlyginimas į rankas" value="{{ $company->salary }}" name="salary"/>
+                        <x-edit.two-cols-bold-edit displayText="Atlyginimas į rankas" value="{{ $company->salary }}" name="salary"/>
                             @error("salary")
                             <p class=" text-red-600 font-semibold text-sm mt-1">{{ $message }}</p>
                             @enderror

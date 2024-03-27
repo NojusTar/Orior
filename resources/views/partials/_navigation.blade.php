@@ -18,10 +18,10 @@
     
 
     <div class="flex gap-10 text-white font-semibold">
-        <a href="/">
+        <a href="/user/1">
             Baldinės plokštės
         </a>
-        <a href="/">
+        <a href="/product/1">
             Stiklo gaminiai
         </a>
         <a href="/">

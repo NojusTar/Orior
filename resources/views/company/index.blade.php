@@ -34,11 +34,14 @@
 
     {{-- popular categories --}}
     <div class="flex justify-center">
-        <div class="bg-white px-40 pb-20">
+        <div class="px-40 pb-20">
             <div class="flex flex-col items-center justify-center">
-                <h2 class="text-3xl font-bold mb-10 mt-10">
+                <h2 class="text-3xl font-bold mt-10">
                     Populiariausios kategorijos
                 </h2>
+                <p class="text-lg mt-3 mb-20">
+                    PerfectParts visada pasiruošę padėti!
+                </p>
                 <div class=" grid grid-rows-1 grid-cols-5">
                     @for ($i = 0; $i < 5; $i++)
                     <div>
@@ -53,10 +56,13 @@
     {{-- popular categories end --}}
     
     {{-- making or selling --}}
-    <div class="flex flex-col items-center gap-3 mt-20">
-        <h2 class="text-center text-3xl font-bold mb-14">
+    <div class="flex flex-col items-center gap-3 mt-20 py-40">
+        <h2 class="text-center text-3xl font-bold">
             Gamini ir / ar parduodi komponentus ar gaminius?
         </h2>
+        <p class="text-lg mt-3 mb-20">
+            PerfectParts visada pasiruošę padėti!
+        </p>
         <div class="flex gap-4 justify-center items-end">
             <div class="w-80">
                 <img src="{{ asset("images/PerfectParts/perfect-parts-logo.svg") }}" alt="">
@@ -70,10 +76,13 @@
     {{-- making or selling end --}}
 
     {{-- how does it work --}}
-    <div class="flex flex-col items-center gap-3 mt-20">
-        <h2 class="text-center text-3xl font-bold mb-10">
+    <div class="flex flex-col items-center gap-3 py-32 bg-[#f7f7f7]">
+        <h2 class="text-center text-3xl font-bold ">
             Kaip veikia Perfect parts?
         </h2>
+        <p class="text-lg mb-20">
+            PerfectParts visada pasiruošę padėti!
+        </p>
 
         <div class="flex">
             {{-- 1 --}}
@@ -181,10 +190,13 @@
     {{-- how does it work end --}}
 
     {{-- uses for you buisness --}}
-    <div class="flex flex-col items-center gap-3 mt-20">
-        <h2 class="text-center text-3xl font-bold mb-14">
+    <div class="flex flex-col items-center gap-3 py-40">
+        <h2 class="text-center text-3xl font-bold">
             Perfect parts nauda tavo verslui
         </h2>
+        <p class="text-lg mb-20">
+            PerfectParts visada pasiruošę padėti!
+        </p>
         <div class="grid gap-x-5 grid-cols-4 grid-rows-2">
             <x-home.uses-comp title="Kurk/Importuok" description="naujus produktus" 
             :image="asset('images/PerfectParts/add_new_product.svg')" />
@@ -214,21 +226,21 @@
     {{-- uses for you buisness end --}}
 
     {{-- work more efective --}}
-    <div class="flex flex-col items-center gap-3 mt-20">
+    <div class="flex flex-col items-center gap-3 py-40 bg-[#f7f7f7]">
         <h2 class="text-center text-3xl font-bold">
             Norisi darbuotis efektyviau?
         </h2>
         <p class="text-lg">
             PerfectParts visada pasiruošę padėti!
         </p>
-        <a class="bg-[#009eff] text-white px-24 py-3 mt-4" href="#">
+        <a class="bg-[#009eff] text-white px-24 py-3 mt-20" href="#">
             Pradėk savo kelionę jau dabar
         </a>
     </div>
     {{-- work more efective end --}}
 
     {{-- partners --}}
-    <h2 class="mt-20 text-3xl font-bold text-center">
+    <h2 class="mt-20 text-3xl font-bold text-center pt-20">
         Mūsų sprendimais pasitiki ir naudoja 
     </h2>
 
@@ -265,9 +277,12 @@
     {{-- subscriptions  --}}
 
     <div class="bg-gray-200 py-40 flex flex-col items-center">
-        <h2 class="text-3xl font-bold mb-20">
+        <h2 class="text-3xl font-bold ">
             Planai, funkcijos ir kainos
         </h2>
+        <p class="text-lg mb-20">
+            PerfectParts visada pasiruošę padėti!
+        </p>
         <div class="flex gap-5">
             <x-home.sub-card>
 
@@ -319,14 +334,14 @@
         </div>
 
         <div>
-            <div class="text-3xl font-bold mt-10">
+            <div class="text-3xl font-bold pt-32">
                 Reikia daugiau funkcijų?
             </div>
-            <div class="text-center leading-none">
+            <p class="text-center text-lg mt-3">
                 Perfect parts - visada pasiruošę padėti!
-            </div>
+            </p>
         </div>
-        <a class="bg-[#009eff] text-white px-5 py-4 mt-1" href="#">
+        <a class="bg-[#009eff] text-white px-5 mt-20 py-2" href="#">
             Susisiek su PerfectParts komanda dabar
         </a>
 
@@ -380,7 +395,7 @@
 
     {{-- website usefulness --}}
 
-    <div class="bg-blue-600 mt-40 py-20 ps-28 flex gap-10">
+    <div class="bg-blue-600 mt-40 py-20 flex ps-56 gap-10">
         <h2 class="text-white text-3xl font-bold">
             Gauk daugiau naudos iš savo internetinės svetainės
         </h2>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Http\Controllers\CompanyController;
 |
 */
 
+// company 
 Route::get('/', [CompanyController::class, "index"]);
 
 Route::get("/company/create", [CompanyController::class, "create"]);
@@ -29,8 +31,8 @@ Route::delete('/companies/{company}', [CompanyController::class, "destroy"]);
 
 Route::get("/company/{company}", [CompanyController::class, "show"]);
 
+// product
+Route::get("/product/1", [ProductController::class, "show"]);
 
-
-Route::get("/register", [UserController::class, "create"]);
-
-Route::post("/users", [UserController::class, "store"]);
+// user
+Route::get("/user/1", [UserController::class, "show"]);
